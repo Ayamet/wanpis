@@ -1,53 +1,77 @@
 # One Piece GRUB Theme by Meowmet
-# Fully compatible, no terminal pixmap, custom highlight PNGs
+# GRUB-compatible style (matches how your MineGrub works)
 
 title-text: ""
 desktop-image: "background.png"
-# Fallback color if image missing
-# desktop-image: "#000000"
 
 title-font: "Unifont Regular 16"
 title-color: "#FFFFFF"
 
-# Terminal background: solid black, safe for all GRUB versions
-terminal-box: "#000000"
+# Terminal for Console and Options (use pixmap pattern like your working MineGrub)
+terminal-border: "0"
+terminal-left: "10%"
+terminal-top: "10%+23"
+terminal-width: "80%"
+terminal-height: "80%"
+# Use a term_*.png nine-slice pixmap if you want a boxed terminal. If you don't have it, comment this line.
+terminal-box: "term_*.png"
 terminal-font: "Unifont Regular 16"
-terminal-border: 0
-# terminal-shadow: 0  # only for GRUB >= 2.06
 
-# Boot menu layout
+# Boot menu text layer (white text, placed over pixmaps)
 + boot_menu {
     left = 10%
     top = 35%
     width = 40%
     height = 30%
+
+    item_font = "Unifont Regular 20"
+    item_color = "#FFFFFF"
+    selected_item_color = "#FFD700"
     item_height = 40
     item_padding = 10
     item_spacing = 10
-    item_font = "Unifont Regular 20"
-    item_color = "#FFFFFF"          # white text
-    selected_item_color = "#FFD700" # gold text for selection
     icon_width = 64
     icon_height = 64
     item_icon_space = 15
+    scrollbar = false
 }
 
-# Selected item highlight: semi-transparent box behind your PNG highlight
+# Boot menu icons/pixmap layer (optional second menu that can draw pixmap-style items)
++ boot_menu {
+    left = 10%
+    top = 35%
+    width = 40%
+    height = 30%
+
+    item_font = "Unifont Regular 20"
+    item_color = "#383838"
+    selected_item_color = "#3f3f28"
+    item_height = 40
+    item_padding = 0
+    item_spacing = 10
+
+    # If you use pattern-based icons, set these (optional — you can also use explicit boot_menu_entry icons)
+    # item_pixmap_style = "icons/item_*.png"
+    # selected_item_pixmap_style = "icons/selected_item_*.png"
+    scrollbar = false
+}
+
+# Selected item fallback background (solid color, quoted)
 + selected_item {
     left = 10%
     top = 35%
     width = 40%
     height = 40
-    # Fallback background color if PNG not supported
-    background_color = "#22222280"  # semi-transparent dark gray
+    # fallback solid color if PNG highlight unsupported
+    background_color = "#222222"
 }
 
-# Boot menu entries with your custom PNG highlights
+# Boot menu entries — keep your custom highlight PNGs and icons
 + boot_menu_entry {
     id = "os-linux"
     icon = "icons/linux.png"
     selected_item_background = "highlights/highlight-linux.png"
-    selected_item_background_color = "#222222"  # fallback for older GRUB
+    selected_item_background_color = "#222222"
 }
 
 + boot_menu_entry {
@@ -71,13 +95,60 @@ terminal-border: 0
     selected_item_background_color = "#222222"
 }
 
-# Notes:
-# 1) Terminal is solid black, no pixmap errors.
-# 2) All custom highlight PNGs are used and safe for modern GRUB.
-# 3) Fallback colors ensure older GRUB versions will not error.
-# 4) All paths are relative to the theme folder:
-#    /boot/grub/themes/onepiece/icons/
-#    /boot/grub/themes/onepiece/highlights/
-# 5) After updating, run:
-#    sudo update-grub  (or grub-mkconfig -o /boot/grub/grub.cfg)
-#    then reboot to test.
+# Optional bottom bar/logo like your MineGrub (adjust values to match your art)
++ image {
+    left = 50%-372
+    top = 40%+314
+    file = "static_bar.png"
+}
+
++ image {
+    left = 50%-400
+    top = 0
+    file = "logo.png"
+}
+
+# Labels/shadows (timeout, stats, etc.)
++ label {
+    left = 6
+    top = 100%-61
+    height = 54
+    width = 200
+    text = "OnePiece GRUB"
+    font = "Unifont Regular 20"
+    color = "white"
+}
+
++ label {
+    left = 9
+    top = 100%-58
+    height = 54
+    width = 200
+    text = "OnePiece GRUB"
+    font = "Unifont Regular 20"
+    color = "#3f3f3f"
+}
+
++ label {
+    id = "__timeout__"
+    left = 50%
+    top = 100%-31
+    height = 24
+    width = 50%-6
+    text = "Booting in %d seconds"
+    align = "right"
+    font = "Unifont Regular 16"
+    color = "white"
+}
+
++ label {
+    id = "__timeout__"
+    left = 50%+3
+    top = 100%-28
+    height = 24
+    width = 50%-6
+    text = "Booting in %d seconds"
+    align = "right"
+    font = "Unifont Regular 16"
+    color = "#3f3f3f"
+}
