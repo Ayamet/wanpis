@@ -21,45 +21,41 @@ terminal-border: "20"
 
 # Boot Menu Box
 + boot_menu {
-    left = 20%
-    width = 60%
-    top = 25%
-    height = 50%
+    left = 10%
+    width = 80%
+    top = 35%
+    height = 45%
     
     item_font = "onepiece 24"
     item_color = "#FFFFFF"
     selected_item_color = "#FFD700"
     selected_item_font = "onepiece 24"
     
-    item_height = 40
-    item_padding = 15
-    item_spacing = 5
-    
-    menu_pixmap_style = "term_*.png"
+    item_height = 50
+    item_padding = 20
+    item_spacing = 10
 }
 
 # One Piece Title
 + label {
-    id = "title"
     text = "🏴‍☠️ PIRATE KING'S BOOTLOADER 🏴‍☠️"
-    font = "onepiece 32"
+    font = "onepiece 36"
     color = "#FFD700"
-    align = "center"
-    left = 0
-    top = 15%
-    width = 100%
+    align = "left"
+    left = 5%
+    top = 10%
+    width = 90%
 }
 
 # Subtitle
 + label {
-    id = "subtitle"
     text = "Choose Your Adventure on the Grand Line"
-    font = "onepiece 20"
+    font = "onepiece 24"
     color = "#FF6B35"
-    align = "center"
-    left = 0
-    top = 20%
-    width = 100%
+    align = "left"
+    left = 5%
+    top = 18%
+    width = 90%
 }
 
 # Countdown Text (Your custom timeout message)
@@ -67,10 +63,10 @@ terminal-border: "20"
     id = "__timeout__"
     align = "right"
     left = 50%
-    top = 93%
-    width = 50%-10
+    top = 90%
+    width = 45%
     text = "Setting sail in %d seconds"
-    font = "onepiece 24"
+    font = "onepiece 20"
     color = "#FFD700"
 }
 
@@ -96,10 +92,10 @@ terminal-border: "20"
 # Help Text
 + label {
     text = "Use ↑↓ to navigate • Enter to select • E to edit • C for command line"
-    font = "onepiece 14"
+    font = "onepiece 16"
     color = "#CCCCCC"
     align = "center"
     left = 0
-    top = 97%
+    top = 95%
     width = 100%
 }
