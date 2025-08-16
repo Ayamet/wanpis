@@ -1,103 +1,105 @@
-# One Piece GRUB Theme by Meowmet
-# Fixed to match actual file structure
+# One Piece GRUB Theme
+# Navigate the Grand Line of Operating Systems!
 
-# Global settings
-title-text: ""
+# Desktop Image (Main Background)
 desktop-image: "background.png"
+desktop-color: "#000000"
 
-# Terminal configuration with your actual terminal files
-terminal-border: "20"
-terminal-left: "10%"
-terminal-top: "10%+23"
+# Title Text
+title-text: ""
+title-font: "onepiece 28"
+title-color: "#FFD700"
+
+# Terminal Settings
+terminal-font: "onepiece 16"
+terminal-box: "term_*.png"
+terminal-left: "10"
+terminal-top: "10"
 terminal-width: "80%"
 terminal-height: "80%"
-terminal-box: "term_*.png"
-terminal-font: "Unifont Regular 16"
+terminal-border: "20"
 
-
-
-# Simple text-only boot menu (no icons, no highlights)
+# Boot Menu Box
 + boot_menu {
-    left = 50%-300
-    top = 40%
-    width = 600
-    height = 500
-
-    item_font = "Unifont Regular 26"
-    item_color = "#ffffff"
+    left = 20%
+    width = 60%
+    top = 25%
+    height = 50%
+    
+    item_font = "onepiece 24"
+    item_color = "#FFFFFF"
     selected_item_color = "#FFD700"
-    item_height = 55
-    item_padding = 10
-    item_spacing = 20
-    scrollbar = false
+    selected_item_font = "onepiece 24"
+    
+    item_height = 40
+    item_padding = 15
+    item_spacing = 5
+    
+    menu_pixmap_style = "term_*.png"
 }
 
-# Theme name label (text)
+# One Piece Title
 + label {
-    left = 6
-    top = 100%-61
-    height = 54
-    width = 300
-    text = "One Piece GRUB Theme"
-    font = "Unifont Regular 20"
-    color = "white"
+    id = "title"
+    text = "🏴‍☠️ PIRATE KING'S BOOTLOADER 🏴‍☠️"
+    font = "onepiece 32"
+    color = "#FFD700"
+    align = "center"
+    left = 0
+    top = 15%
+    width = 100%
 }
 
-# Theme name label (shadow)
+# Subtitle
 + label {
-    left = 9
-    top = 100%-58
-    height = 54
-    width = 300
-    text = "One Piece GRUB Theme"
-    font = "Unifont Regular 20"
-    color = "#3f3f3f"
+    id = "subtitle"
+    text = "Choose Your Adventure on the Grand Line"
+    font = "onepiece 20"
+    color = "#FF6B35"
+    align = "center"
+    left = 0
+    top = 20%
+    width = 100%
 }
 
-# Subtitle label (text)
-+ label {
-    left = 6
-    top = 100%-31
-    height = 54
-    width = 300
-    text = "Adventure Awaits!"
-    font = "Unifont Regular 18"
-    color = "white"
-}
-
-# Subtitle label (shadow)
-+ label {
-    left = 9
-    top = 100%-28
-    height = 54
-    width = 300
-    text = "Adventure Awaits!"
-    font = "Unifont Regular 18"
-    color = "#3f3f3f"
-}
-
-# Timeout label (text)
+# Countdown Text (Your custom timeout message)
 + label {
     id = "__timeout__"
+    align = "right"
     left = 50%
-    top = 100%-31
-    height = 24
-    width = 50%-6
+    top = 93%
+    width = 50%-10
     text = "Setting sail in %d seconds"
-    align = "right"
-    font = "Unifont Regular 18"
-    color = "white"
+    font = "onepiece 24"
+    color = "#FFD700"
 }
 
-# Timeout label (shadow)
-+ label {
+# Progress Bar (Devil Fruit Power Loading)
++ progress_bar {
     id = "__timeout__"
-    left = 50%+3
-    top = 100%-28
-    height = 24
-    width = 50%-6
-    text = "Setting sail in %d seconds"
-    align = "right"
-    font = "Unifont Regular 18"
-    color = "#3f3f3f"
+    left = 20%
+    top = 88%
+    width = 60%
+    height = 30
+    
+    bar_style = "highlight"
+    highlight_style = "term_*.png"
+    
+    bg_color = "#1a1a2e"
+    fg_color = "#FFD700"
+    border_color = "#FF6B35"
+    text = "Devil Fruit Power: %d%%"
+    text_color = "#FFFFFF"
+    font = "onepiece 16"
+}
+
+# Help Text
++ label {
+    text = "Use ↑↓ to navigate • Enter to select • E to edit • C for command line"
+    font = "onepiece 14"
+    color = "#CCCCCC"
+    align = "center"
+    left = 0
+    top = 97%
+    width = 100%
 }
