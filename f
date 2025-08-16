@@ -14,23 +14,9 @@ terminal-height: "80%"
 terminal-box: "term_*.png"
 terminal-font: "Unifont Regular 16"
 
-# Text layer boot menu (white text on top)
-+ boot_menu {
-    left = 50%-300-3
-    top = 40%+14
-    width = 600
-    height = 500
 
-    item_font = "Unifont Regular 24"
-    item_color = "#ffffff"
-    selected_item_color = "#FFD700"
-    item_height = 50
-    item_padding = 0
-    item_spacing = 20
-    scrollbar = false
-}
 
-# Background layer boot menu (uses your highlight files)
+# Boot menu with icons and highlights
 + boot_menu {
     left = 50%-300
     top = 40%
@@ -38,11 +24,14 @@ terminal-font: "Unifont Regular 16"
     height = 500
 
     item_font = "Unifont Regular 24"
-    item_color = "#383838"
-    selected_item_color = "#3f3f28"
+    item_color = "#ffffff"
+    selected_item_color = "#FFD700"
     item_height = 50
-    item_padding = 0
+    item_padding = 5
     item_spacing = 20
+    icon_width = 32
+    icon_height = 32
+    item_icon_space = 10
     item_pixmap_style = "highlights/highlight-*.png"
     selected_item_pixmap_style = "highlights/highlight-*.png"
     scrollbar = false
