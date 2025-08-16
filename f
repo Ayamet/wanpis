@@ -1,154 +1,119 @@
 # One Piece GRUB Theme by Meowmet
-# GRUB-compatible style (matches how your MineGrub works)
+# Fixed to match actual file structure
 
+# Global settings
 title-text: ""
 desktop-image: "background.png"
 
-title-font: "Unifont Regular 16"
-title-color: "#FFFFFF"
-
-# Terminal for Console and Options (use pixmap pattern like your working MineGrub)
-terminal-border: "0"
+# Terminal configuration with your actual terminal files
+terminal-border: "20"
 terminal-left: "10%"
 terminal-top: "10%+23"
 terminal-width: "80%"
 terminal-height: "80%"
-# Use a term_*.png nine-slice pixmap if you want a boxed terminal. If you don't have it, comment this line.
 terminal-box: "term_*.png"
 terminal-font: "Unifont Regular 16"
 
-# Boot menu text layer (white text, placed over pixmaps)
+# Text layer boot menu (white text on top)
 + boot_menu {
-    left = 10%
-    top = 35%
-    width = 40%
-    height = 30%
+    left = 50%-300-3
+    top = 40%+14
+    width = 600
+    height = 500
 
-    item_font = "Unifont Regular 20"
-    item_color = "#FFFFFF"
+    item_font = "Unifont Regular 24"
+    item_color = "#ffffff"
     selected_item_color = "#FFD700"
-    item_height = 40
-    item_padding = 10
-    item_spacing = 10
-    icon_width = 64
-    icon_height = 64
-    item_icon_space = 15
+    item_height = 50
+    item_padding = 0
+    item_spacing = 20
     scrollbar = false
 }
 
-# Boot menu icons/pixmap layer (optional second menu that can draw pixmap-style items)
+# Background layer boot menu (uses your highlight files)
 + boot_menu {
-    left = 10%
-    top = 35%
-    width = 40%
-    height = 30%
+    left = 50%-300
+    top = 40%
+    width = 600
+    height = 500
 
-    item_font = "Unifont Regular 20"
+    item_font = "Unifont Regular 24"
     item_color = "#383838"
     selected_item_color = "#3f3f28"
-    item_height = 40
+    item_height = 50
     item_padding = 0
-    item_spacing = 10
-
-    # If you use pattern-based icons, set these (optional — you can also use explicit boot_menu_entry icons)
-    # item_pixmap_style = "icons/item_*.png"
-    # selected_item_pixmap_style = "icons/selected_item_*.png"
+    item_spacing = 20
+    item_pixmap_style = "highlights/highlight-*.png"
+    selected_item_pixmap_style = "highlights/highlight-*.png"
     scrollbar = false
 }
 
-# Selected item fallback background (solid color, quoted)
-+ selected_item {
-    left = 10%
-    top = 35%
-    width = 40%
-    height = 40
-    # fallback solid color if PNG highlight unsupported
-    background_color = "#222222"
-}
-
-# Boot menu entries — keep your custom highlight PNGs and icons
-+ boot_menu_entry {
-    id = "os-linux"
-    icon = "icons/linux.png"
-    selected_item_background = "highlights/highlight-linux.png"
-    selected_item_background_color = "#222222"
-}
-
-+ boot_menu_entry {
-    id = "os-windows"
-    icon = "icons/windows.png"
-    selected_item_background = "highlights/highlight-windows.png"
-    selected_item_background_color = "#222222"
-}
-
-+ boot_menu_entry {
-    id = "os-arch"
-    icon = "icons/arch.png"
-    selected_item_background = "highlights/highlight-arch.png"
-    selected_item_background_color = "#222222"
-}
-
-+ boot_menu_entry {
-    id = "os-other"
-    icon = "icons/other.png"
-    selected_item_background = "highlights/highlight-other.png"
-    selected_item_background_color = "#222222"
-}
-
-# Optional bottom bar/logo like your MineGrub (adjust values to match your art)
-+ image {
-    left = 50%-372
-    top = 40%+314
-    file = "static_bar.png"
-}
-
-+ image {
-    left = 50%-400
-    top = 0
-    file = "logo.png"
-}
-
-# Labels/shadows (timeout, stats, etc.)
+# Theme name label (text)
 + label {
     left = 6
     top = 100%-61
     height = 54
-    width = 200
-    text = "OnePiece GRUB"
+    width = 300
+    text = "One Piece GRUB Theme"
     font = "Unifont Regular 20"
     color = "white"
 }
 
+# Theme name label (shadow)
 + label {
     left = 9
     top = 100%-58
     height = 54
-    width = 200
-    text = "OnePiece GRUB"
+    width = 300
+    text = "One Piece GRUB Theme"
     font = "Unifont Regular 20"
     color = "#3f3f3f"
 }
 
+# Subtitle label (text)
++ label {
+    left = 6
+    top = 100%-31
+    height = 54
+    width = 300
+    text = "Adventure Awaits!"
+    font = "Unifont Regular 18"
+    color = "white"
+}
+
+# Subtitle label (shadow)
++ label {
+    left = 9
+    top = 100%-28
+    height = 54
+    width = 300
+    text = "Adventure Awaits!"
+    font = "Unifont Regular 18"
+    color = "#3f3f3f"
+}
+
+# Timeout label (text)
 + label {
     id = "__timeout__"
     left = 50%
     top = 100%-31
     height = 24
     width = 50%-6
-    text = "Booting in %d seconds"
+    text = "Setting sail in %d seconds"
     align = "right"
-    font = "Unifont Regular 16"
+    font = "Unifont Regular 18"
     color = "white"
 }
 
+# Timeout label (shadow)
 + label {
     id = "__timeout__"
     left = 50%+3
     top = 100%-28
     height = 24
     width = 50%-6
-    text = "Booting in %d seconds"
+    text = "Setting sail in %d seconds"
     align = "right"
-    font = "Unifont Regular 16"
+    font = "Unifont Regular 18"
     color = "#3f3f3f"
 }
