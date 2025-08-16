@@ -21,10 +21,10 @@ terminal-border: "20"
 
 # Boot Menu Box
 + boot_menu {
-    left = 10%
-    width = 80%
-    top = 35%
-    height = 45%
+    left = 8%
+    width = 60%
+    top = 25%
+    height = 55%
     
     item_font = "onepiece 24"
     item_color = "#FFFFFF"
@@ -42,9 +42,9 @@ terminal-border: "20"
     font = "onepiece 36"
     color = "#FFD700"
     align = "left"
-    left = 5%
-    top = 10%
-    width = 90%
+    left = 8%
+    top = 5%
+    width = 60%
 }
 
 # Subtitle
@@ -53,40 +53,37 @@ terminal-border: "20"
     font = "onepiece 24"
     color = "#FF6B35"
     align = "left"
-    left = 5%
-    top = 18%
-    width = 90%
+    left = 8%
+    top = 12%
+    width = 60%
 }
 
 # Countdown Text (Your custom timeout message)
 + label {
     id = "__timeout__"
-    align = "right"
-    left = 50%
+    align = "left"
+    left = 2%
     top = 90%
-    width = 45%
+    width = 65%
     text = "Setting sail in %d seconds"
-    font = "onepiece 20"
+    font = "onepiece 18"
     color = "#FFD700"
 }
 
 # Progress Bar (Devil Fruit Power Loading)
 + progress_bar {
     id = "__timeout__"
-    left = 20%
-    top = 88%
-    width = 60%
-    height = 30
-    
-    bar_style = "highlight"
-    highlight_style = "term_*.png"
+    left = 2%
+    top = 85%
+    width = 65%
+    height = 25
     
     bg_color = "#1a1a2e"
     fg_color = "#FFD700"
     border_color = "#FF6B35"
     text = "Devil Fruit Power: %d%%"
     text_color = "#FFFFFF"
-    font = "onepiece 16"
+    font = "onepiece 14"
 }
 
 # Help Text
