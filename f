@@ -2,7 +2,7 @@
 title-text: ""
 desktop-image: "background.png"
 
-# Terminal configuration
+# Terminal Configuration
 terminal-border: "20"
 terminal-left: "10%"
 terminal-top: "10%+23"
@@ -11,7 +11,7 @@ terminal-height: "80%"
 terminal-box: "term_*.png"
 terminal-font: "Unifont Regular 16"
 
-# Main boot menu (text layer)
+# Boot Menu (Text Layer)
 + boot_menu {
     left = 50%-297 
     top = 40%+14
@@ -27,7 +27,7 @@ terminal-font: "Unifont Regular 16"
     scrollbar = false
 }
 
-# Boot menu background layer
+# Boot Menu (Background Layer with Icons)
 + boot_menu {
     left = 50%-300
     top = 40%
@@ -40,23 +40,40 @@ terminal-font: "Unifont Regular 16"
     item_height = 40
     item_padding = 0
     item_spacing = 10
-    item_pixmap_style = "item_*.png"
-    selected_item_pixmap_style = "selected_item_*.png"
     scrollbar = false
+    
+    # Use your existing icons
+    item_icon_space = 15
+    icon_width = 64
+    icon_height = 64
 }
 
-# Static bottom bar image
-+ image {
-    left = 50%-372
-    top = 40%+314  # Adjust based on boot options count
-    file = "static_bar.png"
+# Assign icons to menu entries
++ boot_menu_entry {
+    id = "__default__"
+    icon = "icons/other.png"
+}
+
++ boot_menu_entry {
+    id = "Windows"
+    icon = "icons/windows.png"
+}
+
++ boot_menu_entry {
+    id = "Linux"
+    icon = "icons/linux.png"
+}
+
++ boot_menu_entry {
+    id = "Arch"
+    icon = "icons/arc.png"
 }
 
 # Logo image
 + image {
     left = 50%-400
     top = 0
-    file = "logo.png"    
+    file = "background.png"  # Using background as placeholder
 }
 
 # Text labels
@@ -79,6 +96,30 @@ terminal-font: "Unifont Regular 16"
     width = 200
 
     text = "OnePiece GRUB"
+    font = "Unifont Regular 20"
+    color = "#3f3f3f"
+}
+
+# Package count text
++ label {    
+    left = 6
+    top = 100%-31
+    height = 54
+    width = 300
+
+    text = "Bounty: ฿1.5 Billion"
+    font = "Unifont Regular 20"
+    color = "white"
+}
+
+# Package count shadow
++ label {
+    left = 9
+    top = 100%-28
+    height = 54
+    width = 300
+
+    text = "Bounty: ฿1.5 Billion"
     font = "Unifont Regular 20"
     color = "#3f3f3f"
 }
