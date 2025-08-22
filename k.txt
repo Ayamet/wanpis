@@ -1,0 +1,97 @@
+# One Piece GRUB Theme - Simplified Version
+# Navigate the Grand Line of Operating Systems!
+
+# Desktop Image (Main Background)
+desktop-image: "background.png"
+desktop-color: "#000000"
+
+# Title Text
+title-text: ""
+title-font: "DejaVu Sans 28"
+title-color: "#FFD700"
+
+# Terminal Settings
+terminal-font: "DejaVu Sans 16"
+terminal-left: "10"
+terminal-top: "10"
+terminal-width: "80%"
+terminal-height: "80%"
+terminal-border: "20"
+
+# Boot Menu Box
++ boot_menu {
+    left = 8%
+    width = 60%
+    top = 25%
+    height = 55%
+    
+    item_font = "DejaVu Sans 24"
+    item_color = "#FFFFFF"
+    selected_item_color = "#FFD700"
+    selected_item_font = "DejaVu Sans 24"
+    
+    item_height = 50
+    item_padding = 20
+    item_spacing = 10
+}
+
+# One Piece Title
++ label {
+    text = "PIRATE KING'S BOOTLOADER"
+    font = "DejaVu Sans 36"
+    color = "#FFD700"
+    align = "left"
+    left = 8%
+    top = 5%
+    width = 60%
+}
+
+# Subtitle
++ label {
+    text = "Choose Your Adventure on the Grand Line"
+    font = "DejaVu Sans 24"
+    color = "#FF6B35"
+    align = "left"
+    left = 8%
+    top = 12%
+    width = 60%
+}
+
+# Countdown Text
++ label {
+    id = "__timeout__"
+    align = "left"
+    left = 2%
+    top = 90%
+    width = 65%
+    text = "Setting sail in %d seconds"
+    font = "DejaVu Sans 18"
+    color = "#FFD700"
+}
+
+# Progress Bar
++ progress_bar {
+    id = "__timeout__"
+    left = 2%
+    top = 85%
+    width = 65%
+    height = 25
+    
+    bg_color = "#1a1a2e"
+    fg_color = "#FFD700"
+    border_color = "#FF6B35"
+    text = "Devil Fruit Power: %d%%"
+    text_color = "#FFFFFF"
+    font = "DejaVu Sans 14"
+}
+
+# Help Text
++ label {
+    text = "Use arrows to navigate • Enter to select • E to edit • C for command line"
+    font = "DejaVu Sans 16"
+    color = "#CCCCCC"
+    align = "center"
+    left = 0
+    top = 95%
+    width = 100%
+}
