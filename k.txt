@@ -1,42 +1,91 @@
-# One Piece GRUB Theme - Step 3
-# Add font specifications
+# One Piece GRUB Theme - No Terminal Settings
+# Navigate the Grand Line of Operating Systems!
 
-# Basic settings
+# Desktop Image (Main Background)
+desktop-image: "background.png"
 desktop-color: "#000000"
 
-# Boot menu with fonts
+# Title Text (remove these if they cause issues)
+title-text: ""
+title-font: "onepiece 28"
+title-color: "#FFD700"
+
+# NO TERMINAL SETTINGS - REMOVED THEM
+
+# Boot Menu Box
 + boot_menu {
-    left = 20%
-    width = 60%
-    top = 30%
-    height = 40%
+    left = 2%
+    width = 65%
+    top = 25%
+    height = 55%
     
-    item_font = "DejaVu Sans 16"
+    item_font = "onepiece 24"
     item_color = "#FFFFFF"
     selected_item_color = "#FFD700"
-    selected_item_font = "DejaVu Sans 16"
+    selected_item_font = "onepiece 24"
     
-    item_height = 30
-    item_padding = 5
-    item_spacing = 5
+    item_height = 50
+    item_padding = 20
+    item_spacing = 10
 }
 
-# Title with font
+# One Piece Title
 + label {
     text = "PIRATE KING'S BOOTLOADER"
-    font = "DejaVu Sans 24"
+    font = "onepiece 36"
     color = "#FFD700"
-    left = 20%
-    top = 10%
+    align = "left"
+    left = 2%
+    top = 5%
     width = 60%
 }
 
-# Help text
+# Subtitle
 + label {
-    text = "Use arrows to navigate, Enter to select"
-    font = "DejaVu Sans 12"
-    color = "#CCCCCC"
-    left = 20%
-    top = 80%
+    text = "Choose Your Adventure on the Grand Line"
+    font = "onepiece 24"
+    color = "#FF6B35"
+    align = "left"
+    left = 2%
+    top = 12%
     width = 60%
+}
+
+# Countdown Text
++ label {
+    id = "__timeout__"
+    align = "left"
+    left = 2%
+    top = 90%
+    width = 65%
+    text = "Setting sail in %d seconds"
+    font = "onepiece 18"
+    color = "#FFD700"
+}
+
+# Progress Bar
++ progress_bar {
+    id = "__timeout__"
+    left = 2%
+    top = 85%
+    width = 65%
+    height = 25
+    
+    bg_color = "#1a1a2e"
+    fg_color = "#FFD700"
+    border_color = "#FF6B35"
+    text = "Devil Fruit Power: %d%%"
+    text_color = "#FFFFFF"
+    font = "onepiece 14"
+}
+
+# Help Text
++ label {
+    text = "Use arrows to navigate • Enter to select • E to edit • C for command line"
+    font = "onepiece 16"
+    color = "#CCCCCC"
+    align = "center"
+    left = 0
+    top = 95%
+    width = 100%
 }
