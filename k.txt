@@ -1,23 +1,14 @@
-# One Piece GRUB Theme - No Terminal Settings
+# One Piece GRUB Theme
 # Navigate the Grand Line of Operating Systems!
 
 # Desktop Image (Main Background)
 desktop-image: "background.png"
 desktop-color: "#000000"
 
-# Title Text (remove these if they cause issues)
+# Title Text
 title-text: ""
 title-font: "onepiece 28"
 title-color: "#FFD700"
-
-# Terminal (console) styled box — IMPORTANT to avoid freeze
-terminal-border: "20"
-terminal-left: "10%"
-terminal-top: "10%+23"
-terminal-width: "80%"
-terminal-height: "80%"
-terminal-box: "term_*.png"
-terminal-font: "onepiece 22"
 
 # Boot Menu Box
 + boot_menu {
@@ -38,7 +29,7 @@ terminal-font: "onepiece 22"
 
 # One Piece Title
 + label {
-    text = "PIRATE KING'S BOOTLOADER"
+    text = "🏴‍☠️ PIRATE KING'S BOOTLOADER 🏴‍☠️"
     font = "onepiece 36"
     color = "#FFD700"
     align = "left"
@@ -58,7 +49,7 @@ terminal-font: "onepiece 22"
     width = 60%
 }
 
-# Countdown Text
+# Countdown Text (Your custom timeout message)
 + label {
     id = "__timeout__"
     align = "left"
@@ -70,7 +61,7 @@ terminal-font: "onepiece 22"
     color = "#FFD700"
 }
 
-# Progress Bar
+# Progress Bar (Devil Fruit Power Loading)
 + progress_bar {
     id = "__timeout__"
     left = 2%
@@ -88,7 +79,7 @@ terminal-font: "onepiece 22"
 
 # Help Text
 + label {
-    text = "Use arrows to navigate • Enter to select • E to edit • C for command line"
+    text = "Use ↑↓ to navigate • Enter to select • E to edit • C for command line"
     font = "onepiece 16"
     color = "#CCCCCC"
     align = "center"
