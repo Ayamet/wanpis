@@ -1,0 +1,62 @@
+# One Piece GRUB Theme - Functional (uses Minegrub terminal slices)
+desktop-image: "background.png"
+desktop-color: "#000000"
+title-text: ""
+title-font: "onepiece 28"
+title-color: "#FFD700"
+# Use Minegrub terminal pieces (must have term_*.png present)
+terminal-border: "20"
+terminal-left: "10%"
+terminal-top: "10%+23"
+terminal-width: "80%"
+terminal-height: "80%"
+terminal-box: "term_*.png"
+terminal-font: "onepiece 22"
+ 
+# Boot Menu Box (safe sizes)
++ boot_menu {
+    left = 50%-297
+    top = 40%+14
+    width = 600
+    height = 500
+    item_font = "onepiece 22"
+    item_color = "#ffffff"
+    selected_item_color = "#ffffa0"
+    item_height = 34
+    item_padding = 0
+    item_spacing = 38
+    scrollbar = false
+}
+# Subtitle / small label (using your onepiece font)
++ label {
+    text = "Choose Your Adventure on the Grand Line"
+    font = "onepiece 24"
+    color = "#FF6B35"
+    align = "left"
+    left = 2%
+    top = 12%
+    width = 60%
+}
+# Timeout (countdown) and shadow (matching Minegrub layout)
++ label {
+    id = "__timeout__"
+    left = 50%
+    top = 100%-31
+    height = 24
+    width = 50%-6
+    text = "Joining world in %d seconds"
+    align = "right"
+    font = "onepiece 22"
+    color = "white"
+}
++ label {
+    id = "__timeout__"
+    left = 50%+3
+    top = 100%-28
+    height = 24
+    width = 50%-6
+    text = "Joining world in %d seconds"
+    align = "right"
+    font = "onepiece 22"
+    color = "#3f3f3f"
+}
